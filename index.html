@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/responsive.css">
 		<!-- decentralised identity -->
-		<script src="https://unpkg.com/uport-connect/dist/uport-connect.js"></script>
+	
 
 	</head>
 	<body id="top">
@@ -236,28 +236,7 @@ We also provide support for signal distribution as well as skills development</p
 
 
     
-    <script type="text/javascript">
-     //////////////////////////////
-     //  Configure connect object
-     /////////////////////////////
-
-     const Connect = window.uportconnect
-     const uport = new Connect('MyDApp')
-
-     const reqID = 'disclosureReq'
-
-     uport.requestDisclosure()
-
-     uport.onResponse('disclosureReq').then(res => {
-       json = JSON.stringify(res.payload)
-       console.log(json)
-       document.querySelector('#msg').innerHTML = "Congratulations you are now `logged in`.  Here is your DID identifier:  " + json
-     })
-
-     uport.sendVerification({exp: Math.floor(new Date().getTime() / 1000) + 30 * 24 * 60 * 60,
-                             claim: {'Example' : {'Last Seen' : `${new Date()}`}}
-     })
-    </script>
+   
 
 		<!-- load Js -->
 		<script src="js/jquery-1.11.3.min.js"></script>
